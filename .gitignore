@@ -1,0 +1,4 @@
+config.codekit
+.DS_Store
+bower.json
+package.json
