@@ -55,14 +55,24 @@ $foundation-palette: (
   warning: #ffae00,
   alert: #ec5840,
 );
+// Shades of gray
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #fefefe;
+
+// Custom CI colors
+$-ci-lightblue: #6cd4ff;
+$-ci-darkblue: #5d576b;
+$-ci-orange: #F47537;
+$-ci-yellow: #fffc31;
+// $-ci-tmt: #f76c5e;
+$-ci-tmt: #FE938C;
+
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-font-family: 'Merriweather Sans', '思源黑體', 'PingFangTC-Regular', '微軟正黑體', sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -101,6 +111,9 @@ $block-grid-max: 8;
 
 // 4. Base Typography
 // ------------------
+// Google Fonts
+// Merriweather
+@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700,400italic);
 
 $header-font-family: $body-font-family;
 $header-font-weight: $global-weight-normal;
@@ -332,7 +345,7 @@ $helptext-font-size: rem-calc(13);
 $helptext-font-style: italic;
 $input-prefix-color: $black;
 $input-prefix-background: $light-gray;
-$input-prefix-border: 1px solid $medium-gray;
+$input-prefix-border: 1px solid transparent;
 $input-prefix-padding: 1rem;
 $form-label-color: $black;
 $form-label-font-size: rem-calc(14);
