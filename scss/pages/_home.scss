@@ -1,0 +1,159 @@
+// 
+// Headers
+// 
+header 
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	height: 3rem;
+	color: $white;
+}
+
+
+
+// 
+// Canvas
+// 
+.canvas
+{
+	position: relative;
+	height: 100vh;
+}
+
+// Slides
+div[class*='for__slide']
+{
+	@extend %background;
+	@include breakpoint(medium)
+	{
+
+	}
+}
+
+.for__slide_1
+{
+	color: $light-gray;
+	background-image: url('../assets/stock/1_pot_meat.jpg');
+	// background-color: #987987;
+}
+
+.for__slide_2
+{
+	// background-image: url('../assets/stock/2_pad.jpg');
+	// background-color: #1e1e24;
+	background-color: #white;
+}
+
+.for__slide_3
+{
+	background-image: url('../assets/stock/2_pad.jpg');
+	// background-color: #765765;
+}
+
+
+
+
+// Onboard
+.onboard 
+{
+// current stat
+	&.is__current
+	{
+		font-size: 1.5rem;
+		@include breakpoint(medium)
+		{
+			font-size: 2rem;
+		}
+	}
+	&.is__cursor
+	{
+		color: $-ci-tmt;
+		font-size: .875rem;
+		font-weight: 400;
+		animation: cursor_shining .75s infinite;
+		@include breakpoint(medium)
+		{
+			font-size: 1.25rem;
+		}
+	}
+	&.is__buttons
+	{
+		text-align: center;
+		@include breakpoint(medium)
+		{
+			text-align: left;
+		}
+	}
+}
+
+// 訂閱 input 欄位
+.to__subscribe
+{
+	-webkit-appearance: none;
+	border: 2px solid lighten($-ci-darkblue, 20%);
+	&:focus
+	{
+		color: $white;
+		background-color: $-ci-darkblue;
+		border: 2px solid transparent;
+		outline: 0;
+		box-shadow: none;
+	}
+}
+
+// Onboard: Animations
+// Cursor effect
+@keyframes cursor_shining 
+{
+	0%   
+	{
+		opacity: 0;
+	}
+	100% 
+	{ 
+		opacity: .5;
+	}
+}
+
+
+// Copywriting
+.cpywr 
+{
+	text-align: center;
+	// @include breakpoint(medium)
+	// {
+	// 	text-align: left;
+	// }
+}
+
+.is__head
+{
+	margin: 10vh 0 .5rem;
+	font-size: 2rem;
+	font-weight: 700;
+	color: $-ci-tmt;
+}
+.is__main
+{
+	color: $-ci-darkblue;
+	font-size: 1.125rem;
+}
+.is__featured
+{
+	color: $-ci-tmt;
+	font-weight: 700;
+}
+.is__long1
+{
+	padding: 0 1rem;
+	text-align: left;
+	color: $dark-gray;
+	line-height: 1.625em;
+	@include breakpoint(medium)
+	{
+		line-height: 2em;
+	}
+}
