@@ -13,21 +13,7 @@ document.addEventListener('DOMContentLoaded', function()
 			.from("header", .75, {y: -100})
 			.to("header", .75, {opacity: 1}, '-=.75');
 
-// ScrollMagic參數設定 (scene_home_port)
-	var scene_header = new ScrollMagic.Scene
-	({
-		triggerElement: ".is__current",
-		triggerHook: 0.1,
-		duration: 0,
-		reverse: true
-	})
-
-	// 呼叫 Timeline
-	.setTween(tl_header)
-	// Debug Mode
-	.addIndicators({name: "more (duration: 0)"} )
-	// 啟動 Scrollmagic
-	.addTo(header_nav);
+	
 
 	// email_input.focus = function()
 	// {
@@ -37,11 +23,42 @@ document.addEventListener('DOMContentLoaded', function()
 
 if (document.documentElement.clientWidth > 640) 
 	{
-	
+		// ScrollMagic參數設定 (scene_header)
+		var scene_header = new ScrollMagic.Scene
+		({
+			triggerElement: ".is__current",
+			triggerHook: 0.1,
+			duration: 0,
+			reverse: true
+		})
+
+		// 呼叫 Timeline
+		.setTween(tl_header)
+		// Debug Mode
+		.addIndicators({name: "header(desk)"} )
+		// 啟動 Scrollmagic
+		.addTo(header_nav);
 	}
 	else 
 	{
+		// ScrollMagic參數設定 (scene_header)
+		var scene_header = new ScrollMagic.Scene
+		({
+			triggerElement: ".is__buttons",
+			triggerHook: 0.4,
+			duration: 0,
+			reverse: true
+		})
 
+		// 呼叫 Timeline
+		.setTween(tl_header)
+		// Debug Mode
+		.addIndicators({name: "header"} )
+		// 啟動 Scrollmagic
+		.addTo(header_nav);
 	}
+
+
+	
 
 });
