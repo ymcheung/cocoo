@@ -1,0 +1,44 @@
+// 
+// Buttons
+// 
+.button
+{
+	font-weight: 700;
+}
+
+// CTA: Email
+.for__cta_em
+{
+	color: $white;
+	background-color: $-ci-darkblue;
+	border: 2px solid transparent;
+	&:hover,
+	&:focus
+	{
+		background-color: darken($-ci-darkblue, 8%);
+	}
+}
+
+// CTA: More
+.for__cta_more 
+{
+	color: $-ci-tmt;
+	background-color: transparent;
+	border: 2px solid;
+	&:hover,
+	&:focus
+	{
+		color: $white;
+		background-color: $-ci-tmt;
+		border: 2px solid $-ci-tmt;
+	}
+}
+
+
+
+
+// Animations
+.paused 
+{
+	animation: cursor_shining .75s 1 !important;
+}
