@@ -12,7 +12,8 @@
 	color: $white;
 	background-color: $-ci-darkblue;
 	border: 2px solid transparent;
-	&:hover 
+	&:hover,
+	&:focus
 	{
 		background-color: darken($-ci-darkblue, 8%);
 	}
@@ -24,4 +25,20 @@
 	color: $-ci-tmt;
 	background-color: transparent;
 	border: 2px solid;
+	&:hover,
+	&:focus
+	{
+		color: $white;
+		background-color: $-ci-tmt;
+		border: 2px solid $-ci-tmt;
+	}
+}
+
+
+
+
+// Animations
+.paused 
+{
+	animation: cursor_shining .75s 1 !important;
 }

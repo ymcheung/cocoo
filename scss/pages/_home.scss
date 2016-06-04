@@ -3,15 +3,42 @@
 // 
 header 
 {
-	position: absolute;
+	opacity: 0;
+	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 100;
 	width: 100%;
-	height: 3rem;
+	height: 0;
 	color: $white;
+	// background-color: $white;
+	&::after 
+	{
+		position: absolute;
+		content: ' ';
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 4rem;
+		background-image: url('../assets/img/upperborder.png');
+		background-size: cover;
+		background-position: center bottom;
+		background-repeat: no-repeat;
+	}
 }
 
+.header_menu
+{
+	& > li 
+	{
+		display: inline-block;
+		width: 33.33333%;
+		margin-right: -4px;
+		line-height: 2.5rem;
+		color: $dark-gray;
+	}
+}
 
 
 // 
@@ -21,6 +48,7 @@ header
 {
 	position: relative;
 	height: 100vh;
+	transition: height 9999s ease;
 }
 
 // Slides
@@ -59,12 +87,33 @@ div[class*='for__slide']
 // Onboard
 .onboard 
 {
-// current stat
+	&.is__name 
+	{
+		text-align: center;
+		p 
+		{
+			margin: 4.5rem 0 -0.5rem;
+			font-size: 2.5rem;
+			font-weight: 300;
+			@include breakpoint(medium)
+			{
+				margin: 6rem 0 -0.5rem;
+			}
+		}
+		span 
+		{
+			font-size: 1.25rem;
+			font-weight: 300;
+		}
+	}
+	// current stat
 	&.is__current
 	{
+		margin-top: 1rem;
 		font-size: 1.5rem;
 		@include breakpoint(medium)
 		{
+			margin-top: 2.5rem;
 			font-size: 2rem;
 		}
 	}
@@ -73,10 +122,18 @@ div[class*='for__slide']
 		color: $-ci-tmt;
 		font-size: .875rem;
 		font-weight: 400;
-		animation: cursor_shining .75s infinite;
+		animation: cursor_shining 2s infinite;
 		@include breakpoint(medium)
 		{
 			font-size: 1.25rem;
+		}
+	}
+	&.is__subscribe 
+	{
+		text-align: center;
+		@include breakpoint(medium)
+		{
+			text-align: right;
 		}
 	}
 	&.is__buttons
@@ -93,26 +150,35 @@ div[class*='for__slide']
 .to__subscribe
 {
 	-webkit-appearance: none;
+	margin-bottom: 0;
 	border: 2px solid lighten($-ci-darkblue, 20%);
 	&:focus
 	{
 		color: $white;
-		background-color: $-ci-darkblue;
+		@include tran(bg, $-ci-darkblue, .85);
 		border: 2px solid transparent;
 		outline: 0;
 		box-shadow: none;
 	}
 }
 
+.the__email_microcopy
+{
+	@include tran(color, $light-gray, .75);
+	font-size: .75rem;
+}
+
+
 // Onboard: Animations
 // Cursor effect
 @keyframes cursor_shining 
 {
-	0%   
+	0%, 
+	100%   
 	{
 		opacity: 0;
 	}
-	100% 
+	50% 
 	{ 
 		opacity: .5;
 	}
@@ -138,7 +204,7 @@ div[class*='for__slide']
 }
 .is__main
 {
-	color: $-ci-darkblue;
+	color: lighten($-ci-darkblue, 10%);
 	font-size: 1.125rem;
 }
 .is__featured
@@ -156,4 +222,18 @@ div[class*='for__slide']
 	{
 		line-height: 2em;
 	}
+}
+
+
+
+
+footer 
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: .75rem 0;
+	width: 100%;
+	color: $white;
+	@include tran(bg, $black, .75);
 }

@@ -64,7 +64,7 @@ $white: #fefefe;
 
 // Custom CI colors
 $-ci-lightblue: #6cd4ff;
-$-ci-darkblue: #5d576b;
+$-ci-darkblue: #0C1932;
 $-ci-orange: #F47537;
 $-ci-yellow: #fffc31;
 // $-ci-tmt: #f76c5e;
@@ -113,7 +113,7 @@ $block-grid-max: 8;
 // ------------------
 // Google Fonts
 // Merriweather
-@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans:300,400,700,400italic);
 
 $header-font-family: $body-font-family;
 $header-font-weight: $global-weight-normal;
@@ -161,7 +161,7 @@ $hr-border: 1px solid $medium-gray;
 $hr-margin: rem-calc(20) auto;
 $list-lineheight: $paragraph-lineheight;
 $list-margin-bottom: $paragraph-margin-bottom;
-$list-style-type: disc;
+$list-style-type: none;
 $list-style-position: outside;
 $list-side-margin: 1.25rem;
 $list-nested-side-margin: 1.25rem;
