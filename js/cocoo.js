@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function()
 {
 
 	var tl_header = new TimelineLite()
-			.from("header", .75, {y: -100})
+			.from("header", .5, {y: -100})
 			.to("header", .75, {opacity: 1}, '-=.75');
 
 	
@@ -35,7 +35,7 @@ if (document.documentElement.clientWidth > 640)
 		// 呼叫 Timeline
 		.setTween(tl_header)
 		// Debug Mode
-		.addIndicators({name: "header(desk)"} )
+		// .addIndicators({name: "header(desk)"} )
 		// 啟動 Scrollmagic
 		.addTo(header_nav);
 	}
