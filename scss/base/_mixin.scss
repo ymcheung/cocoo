@@ -14,7 +14,7 @@
 }
 
 // Retina Background image
-@mixin imgRetina($image, $extension, $width, $height, $position: center, $repeat: no-repeat) 
+@mixin imgRetina($image, $extension, $width, $height, $position: top, $repeat: no-repeat) 
 {
     background: url($image + '.' + $extension) $repeat $position;
     @media

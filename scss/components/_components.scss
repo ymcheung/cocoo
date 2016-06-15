@@ -1,4 +1,67 @@
 // 
+// Logo
+// 
+.the_logo
+{
+	display: inline-block;	
+	height: auto;
+	background-image: url('../assets/img/cooooookather_logo.svg');
+	background-position: center center;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	&.in__main
+	{
+		width: 80%;
+		@include breakpoint(medium)
+		{
+			width: 50%;
+		}
+	}
+	&.in__left
+	{
+		width: 100%;
+	}
+}
+
+// 
+// Icons
+// 
+.icon 
+{
+	display: inline-block;
+	background-repeat: no-repeat;
+}
+
+.o_vt
+{
+	background-size: auto 100%;
+}
+
+.o_hz
+{
+	background-size: 100% auto;
+}
+
+
+.s__xxlarge
+{
+	width: 48px;
+	height: 48px;
+}
+
+
+.is__veg_basket
+{
+	background-image: url('../assets/icon/veg_basket.svg');
+}
+
+.is__kitchenware
+{
+	background-image: url('../assets/icon/kitchenware.svg');
+}
+
+
+// 
 // Buttons
 // 
 .button

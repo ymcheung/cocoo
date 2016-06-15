@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function()
 {
 
 	var tl_header = new TimelineLite()
-			.from("header", .5, {y: -100})
+			.from("header", .25, {y: -100})
 			.to("header", .75, {opacity: 1}, '-=.75');
 
 	
